@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To do Application</title>
+</head>
+<body>
+    <h1>Danh sách việc cần làm</h1>
+    <ul>
+        <li th:each="todo : ${todoList}">
+            <span th:text="*{todo.getTitle()}"></span> : <span th:text="*{todo.getDetail()}"></span>
+        </li>
+    </ul>
+    <a href="/">Trở về</a>
+
+</body>
+</html>
